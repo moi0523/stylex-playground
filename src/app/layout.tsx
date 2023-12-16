@@ -1,10 +1,17 @@
-import './globals.css'
+import { ReactNode } from "react";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+// if (process.env.NODE_ENV !== "production") {
+//   inject({
+//     runtimeInjection: false,
+//     styleResolution: "application-order",
+//     useRemForFontSize: false,
+//     classNamePrefix: "x-",
+//     dev: true,
+//     test: false,
+//   });
+// }
+
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       {/*
@@ -14,5 +21,7 @@ export default function RootLayout({
       <head />
       <body>{children}</body>
     </html>
-  )
-}
+  );
+};
+
+export default RootLayout;
